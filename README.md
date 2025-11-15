@@ -191,4 +191,4 @@ Workflows:
 ---
 
 ## Contato
-Mantenedor: SEU_NOME — email@exemplo.com
+Mantenedor: Ivandro — jardimivandro6@gmail.com
