@@ -1,0 +1,30 @@
+:root{
+  --bg: #ffffff;
+  --text: #222222;
+  --link: #0066cc;
+  --focus: #ffcc00;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b0b0b;
+    --text: #f2f2f2;
+    --link: #66aaff;
+    --focus: #ffd166;
+  }
+}
+
+/* High contrast theme (toggle class) */
+.high-contrast{
+  --bg: #000000;
+  --text: #ffffff;
+  --link: #ffff00;
+  --focus: #00ff00;
+}
+
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+a{color:var(--link)}
+button:focus, a:focus {outline: 3px solid var(--focus); outline-offset: 2px}
+nav ul{list-style:none;padding:0;display:flex;gap:1rem}
+button{padding:0.6rem 1rem;border-radius:6px;border:1px solid #ccc;background:#eee}

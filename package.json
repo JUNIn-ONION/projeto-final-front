@@ -1,0 +1,9 @@
+{
+  "name": "meu-projeto",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "node build-scripts/build.js",
+    "compress-images": "node build-scripts/compress-images.js"
+  },
+  "devDependencies": {}
+}

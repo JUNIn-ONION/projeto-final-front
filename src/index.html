@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Meu Projeto — Demo Acessível</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Meu Projeto</h1>
+    <nav role="navigation" aria-label="Menu principal">
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home" role="main">
+    <section aria-labelledby="sec-um">
+      <h2 id="sec-um">Demonstração Acessível</h2>
+      <p>Use Tab para navegar; os controles têm foco visível.</p>
+      <button id="acao" aria-pressed="false">Ação</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Projeto Exemplo</p>
+  </footer>
+
+  <script>
+  // keyboard support example: Enter/Space activates button
+  document.getElementById('acao').addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      this.click();
+    }
+  });
+  document.getElementById('acao').addEventListener('click', function(){
+    const pressed = this.getAttribute('aria-pressed') === 'true';
+    this.setAttribute('aria-pressed', String(!pressed));
+    alert('Botão ativado — estado: ' + (!pressed));
+  });
+  </script>
+</body>
+</html>
